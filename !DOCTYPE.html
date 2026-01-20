@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Home Siestava</title>
+    <style>
+        body {
+            background-color: #e3f2fd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            color: #2e7d32;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .stage {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(to bottom, #e3f2fd 70%, #81c784 70%);
+            border-radius: 20px;
+            overflow: hidden;
+            border-bottom: 5px solid #66bb6a;
+        }
+
+        /* House */
+        .house {
+            position: absolute;
+            bottom: 30%;
+            left: 10%;
+            width: 150px;
+            height: 120px;
+            background: #ffab91;
+            border: 3px solid #4e342e;
+        }
+        .roof {
+            position: absolute;
+            top: -60px;
+            left: -25px;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 60px solid #bf360c;
+        }
+
+        /* Person */
+        .person {
+            position: absolute;
+            bottom: 20%;
+            right: 35%;
+            z-index: 5;
+        }
+        .guy-head { width: 30px; height: 30px; background: #ffdbac; border-radius: 50%; margin: 0 auto; }
+        .guy-body { width: 35px; height: 60px; background: #1976d2; border-radius: 10px 10px 0 0; }
+        .flowers {
+            position: absolute;
+            top: 20px;
+            right: -25px;
+            font-size: 30px;
+            animation: wave 1.5s infinite;
+        }
+
+        /* Dog */
+        .dog {
+            position: absolute;
+            bottom: 22%;
+            right: 25%;
+            font-size: 40px;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(20deg); }
+        }
+
+        .sun {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            width: 60px;
+            height: 60px;
+            background: #fff176;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #fff176;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome back home,<br>Siestava Rangsa Marak!</h1>
+        
+        <div class="stage">
+            <div class="sun"></div>
+            
+            <div class="house">
+                <div class="roof"></div>
+            </div>
+
+            <div class="person">
+                <div class="guy-head"></div>
+                <div class="guy-body"></div>
+                <div class="flowers">💐</div>
+            </div>
+
+            <div class="dog">🐕</div>
+        </div>
+    </div>
+
+</body>
+</html>
